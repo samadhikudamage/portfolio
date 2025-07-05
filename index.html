@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <!-- Page Title -->
-    <title>Samadhi - Personal Portfolio</title>
+    <title>Braxton - Personal Portfolio & Resume HTML Template</title>
 
     <!-- Meta Tags -->
     <meta name="description" content="Show yourself brightly with Braxton - unique and creative portfolio and resume template!">
@@ -37,6 +37,31 @@
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Template Styles End -->
+
+    <!-- Gallery Image Fix -->
+    <style>
+      .gallery__image {
+        opacity: 1 !important;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .gallery__link {
+        display: block;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: var(--_radius-xl);
+      }
+      .gallery__link img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      .gallery__link:hover img {
+        transform: scale(1.05);
+      }
+    </style>
 
     <!-- Custom Browser Color Start -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
@@ -113,14 +138,6 @@
     </header>
     <!-- Header End -->
 
-    <!-- Gradient Background Start -->
-    <div class="gradient-background">
-      <div class="blur"></div>
-      <div class="blur"></div>
-      <div class="blur"></div>
-    </div>
-    <!-- Gradient Background End -->
-
     <!-- Avatar Side Block Start -->
     <div id="avatar" class="avatar">
       <div class="avatar__container d-flex flex-column justify-content-lg-between">
@@ -155,25 +172,25 @@
               </svg>
             </div>
             <div class="logo__caption">
-              <p>Samadhi<br>Kudamage</p>
+              <p>Alex<br>Walker</p>
             </div>
           </div>
           <div class="avatar__image">
-            <img src="img/propic.jpeg" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
+            <img src="https://dummyimage.com/1024x1024/4d4d4d/636363" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
           </div>
         </div>
         <!-- data caption #1 -->
         <div class="avatar__block">
           <h6>
             <small class="top">Specialization:</small>
-            UI/UX specialist
+            UI/UX designer<br>and frontend developer
           </h6>
         </div>
         <!-- data caption #2 -->
         <div class="avatar__block">
           <h6>
             <small class="top">Based in:</small>
-            Colombo, Sri Lanka
+            Odesa, Ukraine
           </h6>
         </div>
         <!-- socials and CTA button -->
@@ -224,7 +241,7 @@
               </svg>
               <span>Let's meet!</span>
             </p>
-            <h1 class="headline__title animate-headline">I'm Samadhi Kudamage<br>Digital UI/UX designer.</h1>
+            <h1 class="headline__title animate-headline">I'm Alex Walker<br>Digital designer and illustrator.</h1>
             <div class="headline__btnholder d-flex flex-column flex-sm-row">
               <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline" href="#portfolio">
                 <span class="btn-caption">My Works</span>
@@ -285,12 +302,12 @@
           <!-- Content Block - Works Gallery Start -->
           <div class="content__block grid-block">
             <div class="container-fluid px-0 inner__gallery">
-              <div class="row gx-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+              <div class="row gx-0 portfolio-grid">
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/demo/Frame1597884472.png" data-image="img/demo/Frame1597884472.png" class="gallery__link" itemprop="contentUrl" data-size="1024x1024">
-                    <img src="img/demo/Frame1597884472.png" class="gallery__image" itemprop="thumbnail" alt="Isometric House">
+                  <a href="isometric-house.html" class="gallery__link" itemprop="contentUrl">
+                    <img src="https://dummyimage.com/800x800/6366F5/ffffff?text=Isometric+House" class="gallery__image" itemprop="thumbnail" alt="Isometric House Project">
                   </a>
                   <figcaption class="gallery__descr" itemprop="caption description">
                     <h5>Isometric House</h5>
@@ -300,15 +317,20 @@
                     </div>
                     <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio.
                     </p>
-                    
+                    <div class="btn-group mt-3">
+                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="isometric-house.html">
+                        <span class="btn-caption">View Details</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                      </a>
+                    </div>
                   </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="https://dummyimage.com/1400x1400/3c3c3c/636363" data-image="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  <a href="dashboard-template.html" class="gallery__link" itemprop="contentUrl">
+                    <img src="https://dummyimage.com/800x800/7ED321/ffffff?text=Dashboard+Template" class="gallery__image" itemprop="thumbnail" alt="Dashboard Template Project">
                   </a>
                   <figcaption class="gallery__descr opposite" itemprop="caption description">
                     <h5 class="opposite">Dashboard Template</h5>
@@ -319,14 +341,20 @@
                     <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
                       a mollis ipsum tristique eu.
                     </p>
+                    <div class="btn-group mt-3">
+                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="dashboard-template.html">
+                        <span class="btn-caption">View Details</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                      </a>
+                    </div>
                   </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="https://dummyimage.com/1400x1400/3c3c3c/636363" data-image="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  <a href="notification-icon.html" class="gallery__link" itemprop="contentUrl">
+                    <img src="https://dummyimage.com/800x800/F5A623/ffffff?text=Notification+Icon" class="gallery__image" itemprop="thumbnail" alt="Notification Icon Project">
                   </a>
                   <figcaption class="gallery__descr opposite" itemprop="caption description">
                     <h5 class="opposite">Notification Icon</h5>
@@ -337,16 +365,22 @@
                     <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
                       a mollis ipsum tristique eu.
                     </p>
+                    <div class="btn-group mt-3">
+                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="notification-icon.html">
+                        <span class="btn-caption">View Details</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                      </a>
+                    </div>
                   </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="https://dummyimage.com/1400x1400/3c3c3c/636363" data-image="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="https://dummyimage.com/800x800/3c3c3c/636363" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                  <a href="smart-penguin.html" class="gallery__link" itemprop="contentUrl">
+                    <img src="https://dummyimage.com/800x800/BD10E0/ffffff?text=Smart+Penguin" class="gallery__image" itemprop="thumbnail" alt="Smart Penguin Project">
                   </a>
-                  <figcaption class="gallery__descr " itemprop="caption description">
+                  <figcaption class="gallery__descr" itemprop="caption description">
                     <h5>Smart Penguin</h5>
                     <div class="card__tags d-flex flex-wrap">
                       <span class="rounded-tag opposite">Illustrations</span>
@@ -355,6 +389,12 @@
                     <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
                       a mollis ipsum tristique eu.
                     </p>
+                    <div class="btn-group mt-3">
+                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="smart-penguin.html">
+                        <span class="btn-caption">View Details</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                      </a>
+                    </div>
                   </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
@@ -1120,57 +1160,37 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script>
-      const randomX = random(-400, 400);
-      const randomY = random(-200, 200);
-      const randomDelay = random(0, 50);
-      const randomTime = random(20, 40);
-      const randomTime2 = random(5, 12);
-      const randomAngle = random(-30, 150);
+      gsap.registerPlugin(ScrollTrigger);
 
-      const blurs = gsap.utils.toArray(".blur");
-      blurs.forEach((blur) => {
-        gsap.set(blur, {
-          x: randomX(-1),
-          y: randomX(1),
-          rotation: randomAngle(-1)
+      const content = document.querySelector('body');
+      const imgLoad = imagesLoaded(content);
+      const svgBackground = document.querySelector("svg-background");
+
+      imgLoad.on('done', instance => {
+
+        document.getElementById("loaderContent").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("loader").classList.add("loaded");
+        }, 300);
+
+        gsap.set(".animate-headline", {y: 50, opacity: 0});
+        ScrollTrigger.batch(".animate-headline", {
+          interval: 0.1,
+          batchMax: 4,
+          duration: 6,
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0,
+            ease: 'sine',
+            stagger: {each: 0.15, grid: [1, 4]}, 
+            overwrite: true
+          }),
+          onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+          onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
         });
 
-        moveX(blur, 1);
-        moveY(blur, -1);
-        rotate(blur, 1);
       });
-
-      function rotate(target, direction) {
-        gsap.to(target, randomTime2(), {
-          rotation: randomAngle(direction),
-          ease: Sine.easeInOut,
-          onComplete: rotate,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function moveX(target, direction) {
-        gsap.to(target, randomTime(), {
-          x: randomX(direction),
-          ease: Sine.easeInOut,
-          onComplete: moveX,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function moveY(target, direction) {
-        gsap.to(target, randomTime(), {
-          y: randomY(direction),
-          ease: Sine.easeInOut,
-          onComplete: moveY,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function random(min, max) {
-        const delta = max - min;
-        return (direction = 1) => (min + delta * Math.random()) * direction;
-      }
     </script>
     <script src="js/app.js"></script>
     <script src="js/gallery-init.js"></script>
