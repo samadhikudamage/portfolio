@@ -29,6 +29,63 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/project-details.css">
     <!-- Template Styles End -->
+    
+    <!-- Custom Gallery Styles -->
+    <style>
+      .gallery-item:hover .gallery-caption {
+        transform: translateY(0) !important;
+      }
+      
+      .gallery-item:hover img {
+        transform: scale(1.05) !important;
+        filter: brightness(1.1) contrast(1.1);
+      }
+      
+      .gallery-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .gallery-item:hover::before {
+        opacity: 1;
+      }
+      
+      .badge {
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .stat-number {
+        background: linear-gradient(45deg, var(--accent), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: bold;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .gallery-header h3 {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+      }
+    </style>
 
     <!-- Custom Browser Color Start -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
@@ -379,51 +436,100 @@
 
           <!-- Content Block - Project Gallery Start -->
           <div class="content__block grid-block">
-            <h3 class="animate-in-up mb-4">Project Gallery</h3>
+            <div class="gallery-header text-center mb-5">
+              <h3 class="animate-in-up mb-3">✨ Project Gallery</h3>
+              <p class="animate-in-up text-muted">Explore the visual journey of Hela's design evolution</p>
+              <div class="gallery-divider animate-in-up mx-auto" style="width: 60px; height: 3px; background: linear-gradient(45deg, var(--accent), var(--secondary)); border-radius: 2px; margin-top: 1rem;"></div>
+            </div>
+            
             <div class="container-fluid px-0">
               <div class="row gx-3 project-gallery">
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <div class="gallery-item position-relative">
-                    <img src="img/first page.png" alt="Hela App - Home Screen Design" class="img-fluid">
-                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                      <h6 class="mb-1">Home Screen Design</h6>
-                      <small>Clean interface with personalized travel recommendations</small>
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm" style="transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.02) rotate(1deg)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <img src="img/first page.png" alt="Hela App - Home Screen Design" class="img-fluid" style="transition: transform 0.4s ease;">
+                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); transform: translateY(20px); transition: transform 0.3s ease;">
+                      <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-primary me-2" style="font-size: 0.7rem;">🏠 HOME</span>
+                        <h6 class="mb-0">Home Screen Design</h6>
+                      </div>
+                      <small style="opacity: 0.9;">Clean interface with personalized travel recommendations</small>
                     </div>
                   </div>
                 </div>
+                
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <div class="gallery-item position-relative">
-                    <img src="img/first page.png" alt="Hela App - Itinerary Planning Interface" class="img-fluid">
-                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                      <h6 class="mb-1">Itinerary Planning</h6>
-                      <small>Intuitive drag-and-drop interface for trip organization</small>
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm" style="transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.02) rotate(-1deg)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <img src="img/first page.png" alt="Hela App - Itinerary Planning Interface" class="img-fluid" style="transition: transform 0.4s ease;">
+                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); transform: translateY(20px); transition: transform 0.3s ease;">
+                      <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-success me-2" style="font-size: 0.7rem;">📅 PLANNING</span>
+                        <h6 class="mb-0">Itinerary Planning</h6>
+                      </div>
+                      <small style="opacity: 0.9;">Intuitive drag-and-drop interface for trip organization</small>
                     </div>
                   </div>
                 </div>
+                
                 <div class="col-12 mb-4 animate-in-up">
-                  <div class="gallery-item position-relative">
-                    <img src="img/first page.png" alt="Hela App - Complete User Journey Flow" class="img-fluid">
-                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-4 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                      <h6 class="mb-1">Complete User Journey</h6>
-                      <small>From trip planning to real-time navigation - seamless experience across all touchpoints</small>
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm" style="transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.01)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.1)'">
+                    <img src="img/first page.png" alt="Hela App - Complete User Journey Flow" class="img-fluid" style="transition: transform 0.4s ease;">
+                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-4 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); transform: translateY(20px); transition: transform 0.3s ease;">
+                      <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-warning text-dark me-2" style="font-size: 0.7rem;">🗺️ JOURNEY</span>
+                        <h6 class="mb-0">Complete User Journey</h6>
+                      </div>
+                      <small style="opacity: 0.9;">From trip planning to real-time navigation - seamless experience across all touchpoints</small>
                     </div>
                   </div>
                 </div>
+                
                 <div class="col-12 col-md-4 mb-4 animate-in-up">
-                  <div class="gallery-item position-relative">
-                    <img src="img/first page.png" alt="Hela App - Design System & UI Components" class="img-fluid">
-                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                      <h6 class="mb-1">Design System</h6>
-                      <small>Comprehensive UI kit with consistent visual language</small>
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm" style="transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.03) rotate(2deg)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.18)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 5px 18px rgba(0,0,0,0.1)'">
+                    <img src="img/first page.png" alt="Hela App - Design System & UI Components" class="img-fluid" style="transition: transform 0.4s ease;">
+                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); transform: translateY(20px); transition: transform 0.3s ease;">
+                      <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-info me-2" style="font-size: 0.7rem;">🎨 SYSTEM</span>
+                        <h6 class="mb-0 small">Design System</h6>
+                      </div>
+                      <small style="opacity: 0.9; font-size: 0.75rem;">Comprehensive UI kit with consistent visual language</small>
                     </div>
                   </div>
                 </div>
+                
                 <div class="col-12 col-md-8 mb-4 animate-in-up">
-                  <div class="gallery-item position-relative">
-                    <img src="img/first page.png" alt="Hela App - Wireframes and Prototyping Process" class="img-fluid">
-                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                      <h6 class="mb-1">Wireframes & Prototypes</h6>
-                      <small>From low-fidelity sketches to interactive high-fidelity prototypes in Figma</small>
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-sm" style="transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.02) rotate(-0.5deg)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.18)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 5px 18px rgba(0,0,0,0.1)'">
+                    <img src="img/first page.png" alt="Hela App - Wireframes and Prototyping Process" class="img-fluid" style="transition: transform 0.4s ease;">
+                    <div class="gallery-caption position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); transform: translateY(20px); transition: transform 0.3s ease;">
+                      <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-secondary me-2" style="font-size: 0.7rem;">📐 WIREFRAMES</span>
+                        <h6 class="mb-0">Wireframes & Prototypes</h6>
+                      </div>
+                      <small style="opacity: 0.9;">From low-fidelity sketches to interactive high-fidelity prototypes in Figma</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Gallery Footer -->
+              <div class="gallery-footer text-center mt-5 animate-in-up">
+                <p class="text-muted mb-3">
+                  <em>"Every pixel tells a story of user-centered design"</em>
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="gallery-stats d-flex gap-4">
+                    <div class="stat-item text-center">
+                      <div class="stat-number h4 mb-1" style="color: var(--accent);">50+</div>
+                      <small class="text-muted">Design Iterations</small>
+                    </div>
+                    <div class="stat-divider" style="width: 1px; height: 40px; background: #ddd;"></div>
+                    <div class="stat-item text-center">
+                      <div class="stat-number h4 mb-1" style="color: var(--accent);">15</div>
+                      <small class="text-muted">User Testing Sessions</small>
+                    </div>
+                    <div class="stat-divider" style="width: 1px; height: 40px; background: #ddd;"></div>
+                    <div class="stat-item text-center">
+                      <div class="stat-number h4 mb-1" style="color: var(--accent);">3</div>
+                      <small class="text-muted">Months Development</small>
                     </div>
                   </div>
                 </div>
