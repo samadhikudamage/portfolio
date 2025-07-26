@@ -48,9 +48,10 @@
       }
       .gallery__link {
         display: block;
-        aspect-ratio: 1;
+        aspect-ratio: 4/3;
         overflow: hidden;
         border-radius: var(--_radius-xl);
+        margin-bottom: 1.5rem;
       }
       .gallery__link img {
         width: 100%;
@@ -60,6 +61,47 @@
       }
       .gallery__link:hover img {
         transform: scale(1.05);
+      }
+      
+      /* Portfolio Gallery Improvements */
+      .portfolio-grid {
+        margin-top: 2rem;
+      }
+      .gallery__item {
+        margin-bottom: 3rem;
+      }
+      .gallery__descr {
+        padding: 1.5rem 0;
+      }
+      .gallery__descr h5 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--color-text);
+      }
+      .gallery__descr .small {
+        line-height: 1.6;
+        color: var(--color-text-muted);
+        margin-bottom: 1rem;
+      }
+      .card__tags {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .rounded-tag {
+        padding: 0.4rem 0.8rem;
+        background: var(--color-bg-secondary);
+        border-radius: var(--_radius-md);
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+        transition: all 0.3s ease;
+      }
+      .rounded-tag:hover {
+        background: var(--color-accent);
+        color: white;
+        border-color: var(--color-accent);
       }
     </style>
 
@@ -302,24 +344,24 @@
           <!-- Content Block - Works Gallery Start -->
           <div class="content__block grid-block">
             <div class="container-fluid px-0 inner__gallery">
-              <div class="row gx-0 portfolio-grid">
+              <div class="row gx-4 portfolio-grid">
     
                 <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="isometric-house.html" class="gallery__link" itemprop="contentUrl">
-                    <img src="img/first page.png" class="gallery__image" itemprop="thumbnail" alt="Isometric House Project">
+                    <img src="img/first page.png" class="gallery__image" itemprop="thumbnail" alt="Hela Project - Isometric House Design">
                   </a>
                   <figcaption class="gallery__descr" itemprop="caption description">
-                    <h5>Isometric House</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag opposite">Illustrations</span>
-                      <span class="rounded-tag opposite">3D Render</span>
+                    <h5>Hela Project</h5>
+                    <div class="card__tags d-flex flex-wrap mb-3">
+                      <span class="rounded-tag">3D Design</span>
+                      <span class="rounded-tag">Architecture</span>
+                      <span class="rounded-tag">Blender</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio.
-                    </p>
+                    <p class="small">A modern isometric house design showcasing architectural visualization techniques with clean lines and contemporary aesthetics.</p>
                     <div class="btn-group mt-3">
                       <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="isometric-house.html">
-                        <span class="btn-caption">View Details</span>
+                        <span class="btn-caption">View Project</span>
                         <i class="ph-bold ph-arrow-right"></i>
                       </a>
                     </div>
@@ -328,22 +370,21 @@
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="dashboard-template.html" class="gallery__link" itemprop="contentUrl">
-                    <img src="https://dummyimage.com/800x800/7ED321/ffffff?text=Dashboard+Template" class="gallery__image" itemprop="thumbnail" alt="Dashboard Template Project">
+                    <img src="https://dummyimage.com/800x600/7ED321/ffffff?text=Dashboard+UI" class="gallery__image" itemprop="thumbnail" alt="Dashboard Template - Modern UI Design">
                   </a>
                   <figcaption class="gallery__descr opposite" itemprop="caption description">
                     <h5 class="opposite">Dashboard Template</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag">UI Design</span>
+                    <div class="card__tags d-flex flex-wrap mb-3">
+                      <span class="rounded-tag">UI/UX Design</span>
                       <span class="rounded-tag">Figma</span>
+                      <span class="rounded-tag">Web Design</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                      a mollis ipsum tristique eu.
-                    </p>
+                    <p class="small">A comprehensive dashboard interface featuring modern design principles, intuitive navigation, and data visualization components.</p>
                     <div class="btn-group mt-3">
                       <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="dashboard-template.html">
-                        <span class="btn-caption">View Details</span>
+                        <span class="btn-caption">View Project</span>
                         <i class="ph-bold ph-arrow-right"></i>
                       </a>
                     </div>
@@ -352,22 +393,21 @@
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="notification-icon.html" class="gallery__link" itemprop="contentUrl">
-                    <img src="https://dummyimage.com/800x800/F5A623/ffffff?text=Notification+Icon" class="gallery__image" itemprop="thumbnail" alt="Notification Icon Project">
+                    <img src="https://dummyimage.com/800x600/F5A623/ffffff?text=3D+Icons" class="gallery__image" itemprop="thumbnail" alt="3D Notification Icons Design">
                   </a>
                   <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">Notification Icon</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag">Illustrations</span>
-                      <span class="rounded-tag">3D Render</span>
+                    <h5 class="opposite">3D Notification Icons</h5>
+                    <div class="card__tags d-flex flex-wrap mb-3">
+                      <span class="rounded-tag">Icon Design</span>
+                      <span class="rounded-tag">3D Modeling</span>
+                      <span class="rounded-tag">Mobile UI</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                      a mollis ipsum tristique eu.
-                    </p>
+                    <p class="small">A collection of beautifully crafted 3D notification icons designed for mobile applications with consistent styling and modern appeal.</p>
                     <div class="btn-group mt-3">
                       <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="notification-icon.html">
-                        <span class="btn-caption">View Details</span>
+                        <span class="btn-caption">View Project</span>
                         <i class="ph-bold ph-arrow-right"></i>
                       </a>
                     </div>
@@ -376,22 +416,21 @@
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="smart-penguin.html" class="gallery__link" itemprop="contentUrl">
-                    <img src="https://dummyimage.com/800x800/BD10E0/ffffff?text=Smart+Penguin" class="gallery__image" itemprop="thumbnail" alt="Smart Penguin Project">
+                    <img src="https://dummyimage.com/800x600/BD10E0/ffffff?text=AI+Character" class="gallery__image" itemprop="thumbnail" alt="Smart Penguin - AI Character Design">
                   </a>
                   <figcaption class="gallery__descr" itemprop="caption description">
                     <h5>Smart Penguin</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag opposite">Illustrations</span>
-                      <span class="rounded-tag opposite">AI Experiment</span>
+                    <div class="card__tags d-flex flex-wrap mb-3">
+                      <span class="rounded-tag">Character Design</span>
+                      <span class="rounded-tag">AI Art</span>
+                      <span class="rounded-tag">Branding</span>
                     </div>
-                    <p class="small">Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                      a mollis ipsum tristique eu.
-                    </p>
+                    <p class="small">An innovative AI-generated character design project exploring the intersection of artificial intelligence and creative illustration.</p>
                     <div class="btn-group mt-3">
                       <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="smart-penguin.html">
-                        <span class="btn-caption">View Details</span>
+                        <span class="btn-caption">View Project</span>
                         <i class="ph-bold ph-arrow-right"></i>
                       </a>
                     </div>
@@ -1044,7 +1083,7 @@
           <!-- Content Block - Socials Cards End -->
 
           <!-- Content Block - Teaser Start -->
-          <div class="content__block">
+          <!-- <div class="content__block">
             <div class="teaser">
               <p class="teaser__text animate-in-up">Want to know more about me, tell me 
                 about your project or just to say hello? 
@@ -1053,7 +1092,7 @@
                 as soon as possible.
               </p>
             </div>
-          </div>
+          </div> -->
           <!-- Content Block - Teaser End -->
 
           <!-- Content Block - Contact Data Start -->
@@ -1164,7 +1203,6 @@
 
       const content = document.querySelector('body');
       const imgLoad = imagesLoaded(content);
-      const svgBackground = document.querySelector("svg-background");
 
       imgLoad.on('done', instance => {
 
@@ -1173,22 +1211,78 @@
           document.getElementById("loader").classList.add("loaded");
         }, 300);
 
-        gsap.set(".animate-headline", {y: 50, opacity: 0});
+        // Simple and reliable animations
+        gsap.set(".animate-headline", {y: 30, opacity: 0});
         ScrollTrigger.batch(".animate-headline", {
-          interval: 0.1,
-          batchMax: 4,
-          duration: 6,
           onEnter: batch => gsap.to(batch, {
             opacity: 1, 
-            y: 0,
-            ease: 'sine',
-            stagger: {each: 0.15, grid: [1, 4]}, 
+            y: 0, 
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.15, 
             overwrite: true
           }),
           onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
-          onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 30, overwrite: true})
         });
+
+        gsap.set(".animate-card-2", {y: 30, opacity: 0});
+        ScrollTrigger.batch(".animate-card-2", {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.2, 
+            overwrite: true
+          }),
+          onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 30, overwrite: true})
+        });
+
+        gsap.set(".animate-card-3", {y: 30, opacity: 0});
+        ScrollTrigger.batch(".animate-card-3", {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.1, 
+            overwrite: true
+          }),
+          onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 30, overwrite: true})
+        });
+
+        gsap.set(".animate-card-5", {y: 30, opacity: 0});
+        ScrollTrigger.batch(".animate-card-5", {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.05, 
+            overwrite: true
+          }),
+          onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 30, overwrite: true})
+        });
+
+        gsap.set(".animate-in-up", {y: 30, opacity: 0});
+        ScrollTrigger.batch(".animate-in-up", {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.05, 
+            overwrite: true
+          }),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 30, overwrite: true})
+        });
+
+        // Refresh ScrollTrigger after all animations are set up
+        ScrollTrigger.refresh();
 
       });
     </script>

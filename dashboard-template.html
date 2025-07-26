@@ -296,21 +296,31 @@
           <div class="content__block grid-block">
             <h3 class="animate-in-up mb-4">Project Gallery</h3>
             <div class="container-fluid px-0">
-              <div class="row gx-3 project-gallery">
+              <div class="row gx-4 project-gallery">
                 <div class="col-12 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/1200x700/4d4d4d/636363" alt="Dashboard Overview" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/1200x700/4d4d4d/636363" alt="Dashboard Overview" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/5d5d5d/636363" alt="Analytics Page" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/5d5d5d/636363" alt="Analytics Page" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/6d6d6d/636363" alt="Settings Panel" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/6d6d6d/636363" alt="Settings Panel" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/600x800/7d7d7d/636363" alt="Mobile View" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/600x800/7d7d7d/636363" alt="Mobile View" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-8 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Component Library" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Component Library" class="img-fluid project-image">
+                  </div>
                 </div>
               </div>
             </div>
@@ -351,25 +361,6 @@
           </div>
           <!-- Content Block - Related Projects End -->
 
-          <!-- Content Block - Contact CTA Start -->
-          <div class="content__block">
-            <div class="teaser text-center">
-              <h3 class="animate-in-up">Like what you see?</h3>
-              <p class="teaser__text animate-in-up">
-                I'm always excited to work on new projects and bring creative ideas to life. 
-                <a class="text-link-bold" href="index-solid-color.html#contact">Let's discuss your next project</a> 
-                and see how we can work together.
-              </p>
-              <div class="btn-group animate-in-up">
-                <a class="btn btn-default btn-hover btn-hover-accent" href="index-solid-color.html#contact">
-                  <span class="btn-caption">Start a Project</span>
-                  <i class="ph-bold ph-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Content Block - Contact CTA End -->
-
         </section>
         <!-- Project Details Section End -->
 
@@ -380,20 +371,165 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script>
-      // GSAP Scroll Animations
+      // GSAP Scroll Animations with insane effects
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.set('.animate-in-up', {y: 50, opacity: 0});
-
+      // Crazy text entrance with typewriter effect
+      gsap.set('.animate-in-up', {y: 120, opacity: 0, scale: 0.7, skewY: 15});
       ScrollTrigger.batch('.animate-in-up', {
-        onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0, 
+          scale: 1,
+          skewY: 0,
+          duration: 1.5,
+          ease: 'back.out(2)',
+          stagger: 0.25, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 120, scale: 0.7, skewY: 15, overwrite: true})
       });
 
+      // Mind-blowing card animations with morphing
+      gsap.set('.animate-card-2', {y: 200, opacity: 0, rotationX: 90, scale: 0.5});
       ScrollTrigger.batch('.animate-card-2', {
-        onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0,
+          rotationX: 0,
+          scale: 1,
+          duration: 2.2,
+          ease: 'elastic.out(1, 0.4)',
+          stagger: 0.4, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 200, rotationX: 90, scale: 0.5, overwrite: true})
       });
+
+      // Project images with wild entrance
+      gsap.set('.project-image img', {y: 300, opacity: 0, scale: 0.3, rotation: 45, filter: 'blur(20px)'});
+      ScrollTrigger.batch('.project-image img', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0,
+          scale: 1,
+          rotation: 0,
+          filter: 'blur(0px)',
+          duration: 2.5,
+          ease: 'back.out(1.7)',
+          stagger: 0.3, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 300, scale: 0.3, rotation: 45, filter: 'blur(20px)', overwrite: true})
+      });
+
+      // Gentle hover effects for readability
+      document.querySelectorAll('.project-image img').forEach(img => {
+        img.addEventListener('mouseenter', () => {
+          gsap.to(img, {
+            scale: 1.02,
+            rotation: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            filter: "brightness(1.05) contrast(1.05) saturate(1.1)"
+          });
+        });
+        
+        img.addEventListener('mouseleave', () => {
+          gsap.to(img, {
+            scale: 1,
+            rotation: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            filter: "brightness(1) contrast(1) saturate(1)"
+          });
+        });
+      });
+
+      // Psychedelic floating animations
+      gsap.to('.project-title', {
+        y: -15,
+        rotation: 1,
+        duration: 3,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
+      // Button animations that dance
+      document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          gsap.to(btn, {
+            scale: 1.15,
+            y: -8,
+            rotation: 3,
+            duration: 0.5,
+            ease: "elastic.out(1, 0.3)"
+          });
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, {
+            scale: 1,
+            y: 0,
+            rotation: 0,
+            duration: 0.5,
+            ease: "elastic.out(1, 0.3)"
+          });
+        });
+      });
+
+      // Tags with explosive hover
+      document.querySelectorAll('.rounded-tag').forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+          gsap.to(tag, {
+            scale: 1.3,
+            rotation: 10,
+            duration: 0.4,
+            ease: "back.out(3)"
+          });
+        });
+        
+        tag.addEventListener('mouseleave', () => {
+          gsap.to(tag, {
+            scale: 1,
+            rotation: 0,
+            duration: 0.4,
+            ease: "back.out(2)"
+          });
+        });
+      });
+
+      // Parallax madness for project sections
+      gsap.utils.toArray('.project-section').forEach((section, i) => {
+        gsap.to(section, {
+          yPercent: -30 * (i % 2 === 0 ? 1 : -1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1
+          }
+        });
+      });
+
+      // Page entrance with explosive effect
+      gsap.fromTo('.content__wrapper', 
+        {opacity: 0, scale: 0.5, rotation: 180}, 
+        {opacity: 1, scale: 1, rotation: 0, duration: 2, ease: "back.out(2)"}
+      );
+
+      // Continuous morphing animation
+      gsap.to('.project-container', {
+        y: -20,
+        rotationY: 2,
+        duration: 5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
     </script>
     <script src="js/app.js"></script>
     <!-- Load Scripts End -->

@@ -212,6 +212,48 @@ $(function() {
   ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".animate-card-2", {y: 0, opacity: 1}));
   ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".animate-card-3", {y: 0, opacity: 1}));
   ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".animate-card-5", {y: 0, opacity: 1}));
+  
+  // --------------------------------------------- //
+  // Avatar Hide/Show on Scroll Start
+  // --------------------------------------------- //
+  const avatar = document.getElementById('avatar');
+  const contentElement = document.getElementById('content');
+  
+  // Ensure proper initial state
+  function initializeLayout() {
+    if (window.scrollY < 100) {
+      avatar.classList.remove('hidden');
+      contentElement.classList.remove('full-width');
+    } else {
+      avatar.classList.add('hidden');
+      contentElement.classList.add('full-width');
+    }
+  }
+  
+  // Initialize on load
+  initializeLayout();
+  
+  // Hide avatar when scrolling past the home section
+  ScrollTrigger.create({
+    trigger: "#portfolio",
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => {
+      avatar.classList.add('hidden');
+      contentElement.classList.add('full-width');
+    },
+    onLeaveBack: () => {
+      avatar.classList.remove('hidden');
+      contentElement.classList.remove('full-width');
+    },
+    onRefresh: () => {
+      initializeLayout();
+    }
+  });
+  // --------------------------------------------- //
+  // Avatar Hide/Show on Scroll End
+  // --------------------------------------------- //
+  
   // --------------------------------------------- //
   // Scroll Animations End
   // --------------------------------------------- //

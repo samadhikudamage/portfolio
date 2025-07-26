@@ -308,21 +308,31 @@
           <div class="content__block grid-block">
             <h3 class="animate-in-up mb-4">Project Gallery</h3>
             <div class="container-fluid px-0">
-              <div class="row gx-3 project-gallery">
+              <div class="row gx-4 project-gallery">
                 <div class="col-12 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/1200x700/6d6d6d/636363" alt="Character Expressions" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/1200x700/6d6d6d/636363" alt="Character Expressions" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/7d7d7d/636363" alt="Character Poses" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/7d7d7d/636363" alt="Character Poses" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Brand Applications" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Brand Applications" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/600x800/9d9d9d/636363" alt="Mobile App Usage" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/600x800/9d9d9d/636363" alt="Mobile App Usage" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-8 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/ad9d9d/636363" alt="AI Generation Process" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/ad9d9d/636363" alt="AI Generation Process" class="img-fluid project-image">
+                  </div>
                 </div>
               </div>
             </div>
@@ -363,25 +373,6 @@
           </div>
           <!-- Content Block - Related Projects End -->
 
-          <!-- Content Block - Contact CTA Start -->
-          <div class="content__block">
-            <div class="teaser text-center">
-              <h3 class="animate-in-up">Like what you see?</h3>
-              <p class="teaser__text animate-in-up">
-                I'm always excited to work on new projects and bring creative ideas to life. 
-                <a class="text-link-bold" href="index-solid-color.html#contact">Let's discuss your next project</a> 
-                and see how we can work together.
-              </p>
-              <div class="btn-group animate-in-up">
-                <a class="btn btn-default btn-hover btn-hover-accent" href="index-solid-color.html#contact">
-                  <span class="btn-caption">Start a Project</span>
-                  <i class="ph-bold ph-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Content Block - Contact CTA End -->
-
         </section>
         <!-- Project Details Section End -->
 
@@ -406,6 +397,192 @@
         onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
         onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
       });
+    </script>
+    <script>
+      // GSAP Scroll Animations with penguin-themed playful effects
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Penguin waddle-inspired text animations
+      gsap.set('.animate-in-up', {y: 60, opacity: 0, rotationZ: -10, scale: 0.85});
+      ScrollTrigger.batch('.animate-in-up', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0, 
+          rotationZ: 0,
+          scale: 1,
+          duration: 1.6,
+          ease: 'back.out(1.5)',
+          stagger: 0.15, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 60, rotationZ: -10, scale: 0.85, overwrite: true})
+      });
+
+      // Playful penguin slide-in for cards
+      gsap.set('.animate-card-2', {x: -200, y: 50, opacity: 0, rotationY: -45, scale: 0.7});
+      ScrollTrigger.batch('.animate-card-2', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          x: 0,
+          y: 0,
+          rotationY: 0,
+          scale: 1,
+          duration: 2.1,
+          ease: 'back.out(1.8)',
+          stagger: 0.3, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, x: -200, y: 50, rotationY: -45, scale: 0.7, overwrite: true})
+      });
+
+      // Smart penguin image effects
+      gsap.set('.project-image img', {y: 100, opacity: 0, scale: 0.6, rotationZ: 15});
+      ScrollTrigger.batch('.project-image img', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0,
+          scale: 1,
+          rotationZ: 0,
+          duration: 1.9,
+          ease: 'elastic.out(1, 0.7)',
+          stagger: 0.2, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, scale: 0.6, rotationZ: 15, overwrite: true})
+      });
+
+      // Gentle penguin-like hover effects
+      document.querySelectorAll('.project-image img').forEach(img => {
+        img.addEventListener('mouseenter', () => {
+          gsap.to(img, {
+            scale: 1.02,
+            rotationZ: -0.5,
+            duration: 0.6,
+            ease: "power2.out",
+            filter: "brightness(1.05) saturate(1.1)"
+          });
+          
+          // Subtle penguin waddle effect
+          gsap.to(img, {
+            x: 2,
+            duration: 0.3,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: 1
+          });
+        });
+        
+        img.addEventListener('mouseleave', () => {
+          gsap.to(img, {
+            scale: 1,
+            rotationZ: 0,
+            x: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            filter: "brightness(1) saturate(1)"
+          });
+        });
+      });
+
+      // Penguin head tilt for title
+      gsap.to('.project-title', {
+        rotationZ: 2,
+        y: -8,
+        duration: 2.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
+      // Smart AI-inspired button effects
+      document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          gsap.to(btn, {
+            scale: 1.12,
+            y: -4,
+            rotationY: 5,
+            duration: 0.4,
+            ease: "back.out(2.5)"
+          });
+          
+          // AI processing effect
+          gsap.fromTo(btn, 
+            {filter: "hue-rotate(0deg)"},
+            {filter: "hue-rotate(360deg)", duration: 1, ease: "none"}
+          );
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, {
+            scale: 1,
+            y: 0,
+            rotationY: 0,
+            duration: 0.4,
+            ease: "back.out(2)",
+            filter: "hue-rotate(0deg)"
+          });
+        });
+      });
+
+      // Smart tag animations
+      document.querySelectorAll('.rounded-tag').forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+          gsap.to(tag, {
+            scale: 1.2,
+            rotationZ: -5,
+            duration: 0.3,
+            ease: "back.out(3)"
+          });
+          
+          // Smart glow effect
+          gsap.to(tag, {
+            textShadow: "0 0 10px rgba(0,255,255,0.8)",
+            duration: 0.3
+          });
+        });
+        
+        tag.addEventListener('mouseleave', () => {
+          gsap.to(tag, {
+            scale: 1,
+            rotationZ: 0,
+            duration: 0.3,
+            ease: "back.out(2)",
+            textShadow: "0 0 0px rgba(0,255,255,0)"
+          });
+        });
+      });
+
+      // Penguin colony wave effect
+      gsap.utils.toArray('.project-section').forEach((section, i) => {
+        gsap.to(section, {
+          yPercent: -10 * Math.cos(i * 0.5),
+          rotationZ: 1 * Math.sin(i * 0.3),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.5
+          }
+        });
+      });
+
+      // Smart entrance animation
+      gsap.fromTo('.content__wrapper', 
+        {opacity: 0, scale: 0.8, rotationX: 30}, 
+        {opacity: 1, scale: 1, rotationX: 0, duration: 2, ease: "back.out(1.7)"}
+      );
+
+      // AI thinking pulse
+      gsap.to('.penguin-container', {
+        scale: 1.01,
+        filter: "brightness(1.05)",
+        duration: 3,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
     </script>
     <script src="js/app.js"></script>
     <!-- Load Scripts End -->

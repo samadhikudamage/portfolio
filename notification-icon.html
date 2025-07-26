@@ -301,21 +301,31 @@
           <div class="content__block grid-block">
             <h3 class="animate-in-up mb-4">Project Gallery</h3>
             <div class="container-fluid px-0">
-              <div class="row gx-3 project-gallery">
+              <div class="row gx-4 project-gallery">
                 <div class="col-12 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/1200x700/5d5d5d/636363" alt="Complete Icon Set" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/1200x700/5d5d5d/636363" alt="Complete Icon Set" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/6d6d6d/636363" alt="Icon Variations" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/6d6d6d/636363" alt="Icon Variations" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/7d7d7d/636363" alt="Size Comparison" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/7d7d7d/636363" alt="Size Comparison" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-8 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Implementation Guide" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/800x600/8d8d8d/636363" alt="Implementation Guide" class="img-fluid project-image">
+                  </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4 animate-in-up">
-                  <img src="https://dummyimage.com/600x800/9d9d9d/636363" alt="Mobile Context" class="img-fluid">
+                  <div class="gallery-item position-relative overflow-hidden rounded-3 shadow-lg">
+                    <img src="https://dummyimage.com/600x800/9d9d9d/636363" alt="Mobile Context" class="img-fluid project-image">
+                  </div>
                 </div>
               </div>
             </div>
@@ -356,25 +366,6 @@
           </div>
           <!-- Content Block - Related Projects End -->
 
-          <!-- Content Block - Contact CTA Start -->
-          <div class="content__block">
-            <div class="teaser text-center">
-              <h3 class="animate-in-up">Like what you see?</h3>
-              <p class="teaser__text animate-in-up">
-                I'm always excited to work on new projects and bring creative ideas to life. 
-                <a class="text-link-bold" href="index-solid-color.html#contact">Let's discuss your next project</a> 
-                and see how we can work together.
-              </p>
-              <div class="btn-group animate-in-up">
-                <a class="btn btn-default btn-hover btn-hover-accent" href="index-solid-color.html#contact">
-                  <span class="btn-caption">Start a Project</span>
-                  <i class="ph-bold ph-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Content Block - Contact CTA End -->
-
         </section>
         <!-- Project Details Section End -->
 
@@ -385,20 +376,176 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script>
-      // GSAP Scroll Animations
+      // GSAP Scroll Animations with notification-themed effects
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.set('.animate-in-up', {y: 50, opacity: 0});
-
+      // Notification pop-in effect for text
+      gsap.set('.animate-in-up', {y: 80, opacity: 0, scale: 0.9, rotationZ: -5});
       ScrollTrigger.batch('.animate-in-up', {
-        onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0, 
+          scale: 1,
+          rotationZ: 0,
+          duration: 1.4,
+          ease: 'back.out(2.5)',
+          stagger: 0.2, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 80, scale: 0.9, rotationZ: -5, overwrite: true})
       });
 
+      // Bell-like swing animation for cards
+      gsap.set('.animate-card-2', {y: 100, opacity: 0, rotationZ: -30, scale: 0.6});
       ScrollTrigger.batch('.animate-card-2', {
-        onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0,
+          rotationZ: 0,
+          scale: 1,
+          duration: 2,
+          ease: 'elastic.out(1, 0.6)',
+          stagger: 0.35, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, rotationZ: -30, scale: 0.6, overwrite: true})
       });
+
+      // Notification icon images with bounce
+      gsap.set('.project-image img', {y: 150, opacity: 0, scale: 0.4, rotationY: 180});
+      ScrollTrigger.batch('.project-image img', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0,
+          scale: 1,
+          rotationY: 0,
+          duration: 2.3,
+          ease: 'back.out(2)',
+          stagger: 0.25, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 150, scale: 0.4, rotationY: 180, overwrite: true})
+      });
+
+      // Gentle notification-style hover effects
+      document.querySelectorAll('.project-image img').forEach(img => {
+        img.addEventListener('mouseenter', () => {
+          gsap.to(img, {
+            scale: 1.02,
+            rotationZ: 1,
+            duration: 0.5,
+            ease: "power2.out",
+            filter: "brightness(1.05) drop-shadow(0 5px 10px rgba(255,100,100,0.2))"
+          });
+          
+          // Subtle pulsing glow effect
+          gsap.to(img, {
+            boxShadow: "0 0 15px rgba(255,100,100,0.4)",
+            duration: 0.5
+          });
+        });
+        
+        img.addEventListener('mouseleave', () => {
+          gsap.to(img, {
+            scale: 1,
+            rotationZ: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            filter: "brightness(1) drop-shadow(0 0 0px rgba(255,100,100,0))",
+            boxShadow: "0 0 0px rgba(255,100,100,0)"
+          });
+        });
+      });
+
+      // Bell swing animation for title
+      gsap.to('.project-title', {
+        rotationZ: 3,
+        duration: 1.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
+      // Notification badge-style buttons
+      document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          gsap.to(btn, {
+            scale: 1.2,
+            y: -6,
+            rotationZ: -2,
+            duration: 0.4,
+            ease: "back.out(3)"
+          });
+          
+          // Add notification pulse
+          gsap.fromTo(btn, 
+            {boxShadow: "0 0 0px rgba(255,0,100,0)"},
+            {boxShadow: "0 0 20px rgba(255,0,100,0.6)", duration: 0.3, yoyo: true, repeat: 2}
+          );
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, {
+            scale: 1,
+            y: 0,
+            rotationZ: 0,
+            duration: 0.4,
+            ease: "back.out(2)",
+            boxShadow: "0 0 0px rgba(255,0,100,0)"
+          });
+        });
+      });
+
+      // Alert-style tag animations
+      document.querySelectorAll('.rounded-tag').forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+          gsap.to(tag, {
+            scale: 1.25,
+            rotationZ: 8,
+            duration: 0.3,
+            ease: "back.out(4)"
+          });
+        });
+        
+        tag.addEventListener('mouseleave', () => {
+          gsap.to(tag, {
+            scale: 1,
+            rotationZ: 0,
+            duration: 0.3,
+            ease: "back.out(2)"
+          });
+        });
+      });
+
+      // Notification wave effect
+      gsap.utils.toArray('.project-section').forEach((section, i) => {
+        gsap.to(section, {
+          yPercent: -15 * Math.sin(i),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2
+          }
+        });
+      });
+
+      // Page entrance with notification pop
+      gsap.fromTo('.content__wrapper', 
+        {opacity: 0, scale: 0.3, y: -100}, 
+        {opacity: 1, scale: 1, y: 0, duration: 1.8, ease: "bounce.out"}
+      );
+
+      // Continuous notification pulse
+      gsap.to('.notification-container', {
+        scale: 1.02,
+        duration: 2,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+
     </script>
     <script src="js/app.js"></script>
     <!-- Load Scripts End -->
