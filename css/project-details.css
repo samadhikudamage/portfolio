@@ -48,6 +48,25 @@
   border-bottom: 1px solid var(--border);
 }
 
+/* Add gaps between project images */
+.project-image {
+  margin-bottom: 3rem;
+}
+
+.project-image img {
+  margin-bottom: 2rem;
+}
+
+/* Specific spacing for gallery blocks */
+.content__block.grid-block {
+  margin-bottom: 3rem;
+}
+
+/* Add more spacing between consecutive image blocks */
+.content__block.grid-block + .content__block.grid-block {
+  margin-top: 2rem;
+}
+
 .project-info__item:last-child {
   border-bottom: none;
 }
