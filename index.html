@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/loaders/loader.css">
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/modern-glassy.css">
     <!-- Template Styles End -->
 
     <!-- Gallery Image Fix -->
@@ -218,7 +219,7 @@
             </div>
           </div>
           <div class="avatar__image">
-            <img src="https://dummyimage.com/1024x1024/4d4d4d/636363" alt="Samadhi Kudamage - Personal Portfolio">
+            <img src="img/pro_pic.jpeg" alt="Samadhi Kudamage - Personal Portfolio">
           </div>
         </div>
         <!-- data caption #1 -->
@@ -351,44 +352,22 @@
                   <a href="isometric-house.html" class="gallery__link" itemprop="contentUrl">
                     <img src="img/first page.png" class="gallery__image" itemprop="thumbnail" alt="Hela Project - Isometric House Design">
                   </a>
-                  <figcaption class="gallery__descr" itemprop="caption description">
-                    <h5>Hela Project</h5>
-                    <div class="card__tags d-flex flex-wrap mb-3">
-                      <span class="rounded-tag">3D Design</span>
-                      <span class="rounded-tag">Architecture</span>
-                      <span class="rounded-tag">Blender</span>
-                    </div>
-                    <p class="small">A modern isometric house design showcasing architectural visualization techniques with clean lines and contemporary aesthetics.</p>
-                    <div class="btn-group mt-3">
-                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="isometric-house.html">
-                        <span class="btn-caption">View Project</span>
-                        <i class="ph-bold ph-arrow-right"></i>
-                      </a>
-                    </div>
-                  </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
                 <!-- Works Gallery Single Item Start -->
                 <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="hela-website.html" class="gallery__link" itemprop="contentUrl">
+                    <img src="img/hela_web/1.png" class="gallery__image" itemprop="thumbnail" alt="Hela Website Experience - Responsive Web Design">
+                  </a>
+                </figure>
+                <!-- Works Gallery Single Item End -->
+
+                <!-- Works Gallery Single Item Start -->
+                <figure class="col-12 col-lg-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="dashboard-template.html" class="gallery__link" itemprop="contentUrl">
                     <img src="https://dummyimage.com/800x600/7ED321/ffffff?text=Dashboard+UI" class="gallery__image" itemprop="thumbnail" alt="Dashboard Template - Modern UI Design">
                   </a>
-                  <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">Dashboard Template</h5>
-                    <div class="card__tags d-flex flex-wrap mb-3">
-                      <span class="rounded-tag">UI/UX Design</span>
-                      <span class="rounded-tag">Figma</span>
-                      <span class="rounded-tag">Web Design</span>
-                    </div>
-                    <p class="small">A comprehensive dashboard interface featuring modern design principles, intuitive navigation, and data visualization components.</p>
-                    <div class="btn-group mt-3">
-                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="dashboard-template.html">
-                        <span class="btn-caption">View Project</span>
-                        <i class="ph-bold ph-arrow-right"></i>
-                      </a>
-                    </div>
-                  </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
@@ -397,21 +376,6 @@
                   <a href="notification-icon.html" class="gallery__link" itemprop="contentUrl">
                     <img src="https://dummyimage.com/800x600/F5A623/ffffff?text=3D+Icons" class="gallery__image" itemprop="thumbnail" alt="3D Notification Icons Design">
                   </a>
-                  <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">3D Notification Icons</h5>
-                    <div class="card__tags d-flex flex-wrap mb-3">
-                      <span class="rounded-tag">Icon Design</span>
-                      <span class="rounded-tag">3D Modeling</span>
-                      <span class="rounded-tag">Mobile UI</span>
-                    </div>
-                    <p class="small">A collection of beautifully crafted 3D notification icons designed for mobile applications with consistent styling and modern appeal.</p>
-                    <div class="btn-group mt-3">
-                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="notification-icon.html">
-                        <span class="btn-caption">View Project</span>
-                        <i class="ph-bold ph-arrow-right"></i>
-                      </a>
-                    </div>
-                  </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
@@ -420,21 +384,6 @@
                   <a href="smart-penguin.html" class="gallery__link" itemprop="contentUrl">
                     <img src="https://dummyimage.com/800x600/BD10E0/ffffff?text=AI+Character" class="gallery__image" itemprop="thumbnail" alt="Smart Penguin - AI Character Design">
                   </a>
-                  <figcaption class="gallery__descr" itemprop="caption description">
-                    <h5>Smart Penguin</h5>
-                    <div class="card__tags d-flex flex-wrap mb-3">
-                      <span class="rounded-tag">Character Design</span>
-                      <span class="rounded-tag">AI Art</span>
-                      <span class="rounded-tag">Branding</span>
-                    </div>
-                    <p class="small">An innovative AI-generated character design project exploring the intersection of artificial intelligence and creative illustration.</p>
-                    <div class="btn-group mt-3">
-                      <a class="btn btn-sm btn-default btn-hover btn-hover-accent" href="smart-penguin.html">
-                        <span class="btn-caption">View Project</span>
-                        <i class="ph-bold ph-arrow-right"></i>
-                      </a>
-                    </div>
-                  </figcaption>
                 </figure>
                 <!-- Works Gallery Single Item End -->
     
@@ -1203,6 +1152,27 @@
 
       const content = document.querySelector('body');
       const imgLoad = imagesLoaded(content);
+
+      // Add home page class and scroll detection for top-left navigation
+      document.body.classList.add('home-page');
+      
+      // Scroll detection for top-left navigation movement
+      let isScrolled = false;
+      const handleScroll = () => {
+        const currentScroll = window.pageYOffset;
+        const shouldMoveNav = currentScroll > window.innerHeight * 0.7; // Move nav after 70% of viewport
+        
+        if (shouldMoveNav && !isScrolled) {
+          document.body.classList.add('scrolled');
+          isScrolled = true;
+        } else if (!shouldMoveNav && isScrolled) {
+          document.body.classList.remove('scrolled');
+          isScrolled = false;
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
 
       imgLoad.on('done', instance => {
 

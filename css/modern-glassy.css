@@ -1,0 +1,442 @@
+/* Modern Glassy Button Styles - Global Override */
+/* This file contains modern iOS-style glassy button effects for all pages */
+
+/* Global Modern B/* Tag Styles */
+.rounded-tag {
+  border-radius: 30px !important;
+  backdrop-filter: blur(15px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+  color: var(--color-text) !important;
+}
+
+.rounded-tag:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: var(--color-text) !important;
+}
+
+/* Top-Left Navigation Animation */
+/* Navigation moves smoothly to top-left when scrolling */
+@media (min-width: 992px) {
+  .home-page.scrolled #header {
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    z-index: 1000 !important;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1) !important; /* Smoother transition */
+    background: none !important; /* Remove background box */
+    border-radius: 0 !important; /* Remove border radius */
+    padding: 0 !important; /* Remove padding */
+    box-shadow: none !important; /* Remove shadow */
+    justify-content: space-between !important; /* Spread navigation and controls */
+  }
+
+  .home-page.scrolled .header__navigation {
+    margin: 0 !important;
+  }
+
+  .home-page.scrolled .header__controls {
+    margin-left: 0 !important; /* Reset margin */
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 1001 !important;
+    display: flex !important;
+    gap: 12px !important;
+  }
+
+  .home-page.scrolled .menu__list {
+    gap: 12px !important; /* Slightly more spacing */
+    flex-direction: row !important;
+  }
+
+  /* Individual button styling for cleaner look */
+  .home-page.scrolled .menu__link.btn {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 10px 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .home-page.scrolled .menu__link.btn:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .home-page.scrolled .header__switcher,
+  .home-page.scrolled .header__trigger {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 10px 14px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .home-page.scrolled .header__switcher:hover,
+  .home-page.scrolled .header__trigger:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* Project pages - same clean positioning as home page when scrolled */
+@media (min-width: 992px) {
+  .project-page #header {
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    z-index: 1000 !important;
+    background: none !important; /* Remove background box */
+    border-radius: 0 !important; /* Remove border radius */
+    padding: 0 !important; /* Remove padding */
+    box-shadow: none !important; /* Remove shadow */
+    justify-content: space-between !important; /* Spread navigation and controls */
+  }
+
+  .project-page .header__navigation {
+    margin: 0 !important;
+  }
+
+  .project-page .header__controls {
+    margin-left: 0 !important; /* Reset margin */
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 1001 !important;
+    display: flex !important;
+    gap: 12px !important;
+  }
+
+  .project-page .menu__list {
+    gap: 12px !important;
+    flex-direction: row !important;
+  }
+
+  /* Individual button styling for project pages */
+  .project-page .menu__link.btn {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 10px 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .project-page .menu__link.btn:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .project-page .header__switcher,
+  .project-page .header__trigger {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 10px 14px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .project-page .header__switcher:hover,
+  .project-page .header__trigger:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+.btn {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  border-radius: 28px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.1) !important;
+  color: var(--color-text) !important;
+}
+
+.btn:hover {
+  background: rgba(168, 85, 247, 0.25) !important;
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.2) !important;
+  color: var(--color-text) !important;
+}
+
+/* Navigation Menu Buttons */
+.menu__link.btn {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 25px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  color: var(--color-text) !important;
+}
+
+.menu__link.btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  color: var(--color-text) !important;
+}
+
+/* Header Controls */
+.header__switcher,
+.header__trigger {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 25px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  color: var(--color-text) !important;
+}
+
+.header__switcher:hover,
+.header__trigger:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  color: var(--color-text) !important;
+}
+
+/* Social buttons in avatar */
+.socials-square__link.btn {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 22px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  color: var(--color-text) !important;
+}
+
+.socials-square__link.btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  color: var(--color-text) !important;
+}
+
+/* Accent button variations */
+.btn-hover-accent:hover {
+  background: rgba(168, 85, 247, 0.3) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.25) !important;
+  color: var(--color-text) !important;
+}
+
+.btn-hover-accent-mobile {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  border-radius: 28px !important;
+  color: var(--color-text) !important;
+}
+
+.btn-hover-accent-mobile:hover {
+  background: rgba(168, 85, 247, 0.3) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  color: var(--color-text) !important;
+}
+
+/* Override any existing ::before pseudo elements */
+.btn::before {
+  display: none !important;
+}
+
+/* Button text visibility improvements for light/dark modes */
+.btn .btn-caption,
+.btn span,
+.menu__caption,
+.trigger__caption {
+  color: var(--color-text) !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dark mode specific text adjustments */
+[data-color-scheme="dark"] .btn,
+[data-color-scheme="dark"] .btn:hover,
+[data-color-scheme="dark"] .menu__link.btn,
+[data-color-scheme="dark"] .menu__link.btn:hover,
+[data-color-scheme="dark"] .header__switcher,
+[data-color-scheme="dark"] .header__trigger,
+[data-color-scheme="dark"] .socials-square__link.btn {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Light mode specific text adjustments */
+[data-color-scheme="light"] .btn,
+[data-color-scheme="light"] .btn:hover,
+[data-color-scheme="light"] .menu__link.btn,
+[data-color-scheme="light"] .menu__link.btn:hover,
+[data-color-scheme="light"] .header__switcher,
+[data-color-scheme="light"] .header__trigger,
+[data-color-scheme="light"] .socials-square__link.btn {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Icons in buttons */
+.btn i,
+.menu__link i,
+.header__switcher i,
+.header__trigger i,
+.socials-square__link i {
+  color: inherit !important;
+}
+
+/* Modern tags */
+.rounded-tag {
+  backdrop-filter: blur(15px) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  color: var(--color-text) !important;
+}
+
+.rounded-tag:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-1px) !important;
+  color: var(--color-text) !important;
+}
+
+/* Portfolio gallery images */
+.gallery__image {
+  border-radius: 16px !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.gallery__item:hover .gallery__image {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Service cards images */
+.cards__image img {
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Tools cards */
+.tools-cards__card {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.tools-cards__card:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Achievement cards */
+.achievements__card {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.achievements__card:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Service cards */
+.cards__card {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.cards__card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Testimonial cards */
+.testimonials-card {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Social cards */
+.socials-cards__card {
+  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.socials-cards__card:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form elements */
+input, textarea {
+  backdrop-filter: blur(15px) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 25px !important;
+  transition: all 0.3s ease !important;
+  color: var(--color-text) !important;
+}
+
+input:focus, textarea:focus {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2) !important;
+  color: var(--color-text) !important;
+}
+
+/* Avatar image */
+.avatar__image img {
+  border-radius: 20px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.avatar__image img:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Page Title -->
+    <title>Hela Website Experience - Samadhi Kudamage Portfolio</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Detailed view of Hela Website Experience project - Samadhi Kudamage UI/UX Specialist portfolio">
+    <meta name="keywords" content="samadhi kudamage, ui/ux, web design, responsive design, hela website, portfolio, user experience">
+    <meta name="author" content="samadhi_kudamage">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/project-details.css">
+    <link rel="stylesheet" type="text/css" href="css/modern-glassy.css">
+    <!-- Template Styles End -->
+    
+    <!-- Custom Project Styles -->
+    <style>
+      /* Force full-width content for project pages */
+      #content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      #content.full-width {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      /* Disable any avatar-related spacing */
+      body {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
+
+      /* Modern rounded corners for all project images */
+      .project-hero img,
+      .project-image img,
+      .gallery-image {
+        border-radius: 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* Glassy hover effects */
+      .project-hero img:hover,
+      .project-image img:hover,
+      .gallery-image:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(20px);
+      }
+
+      /* Glassy card effects */
+      .related-project {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow: hidden;
+      }
+
+      .related-project:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .related-project img {
+        border-radius: 12px;
+      }
+    </style>
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+    <meta name="msapplication-navbutton-color" content="#111111">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Custom Browser Color End -->
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div id="loaderContent" class="loader__content">
+        <div class="loader__shadow"></div>
+        <div class="loader__box"></div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Header Start -->
+    <header id="header" class="header d-flex justify-content-between">
+
+      <!-- Navigation Menu Start -->
+      <div class="header__navigation">
+        <nav id="menu" class="menu">
+          <ul class="menu__list d-flex justify-content-start">
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#home">
+                <span class="menu__caption">Home</span>
+                <i class="ph-bold ph-house-simple"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#portfolio">
+                <span class="menu__caption">Portfolio</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#about">
+                <span class="menu__caption">About Me</span>
+                <i class="ph-bold ph-user"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#resume">
+                <span class="menu__caption">Resume</span>
+                <i class="ph-bold ph-article"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#contact">
+                <span class="menu__caption">Contact</span>
+                <i class="ph-bold ph-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Navigation Menu End -->
+
+      <!-- Header Controls Start -->
+      <div class="header__controls d-flex justify-content-end">
+        <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+        <a id="notify-trigger" class="header__trigger btn" href="mailto:hello@samadhikudamage.com?subject=Message%20from%20your%20site">
+          <span class="trigger__caption">Let's Talk</span>
+          <i class="ph-bold ph-chat-dots"></i>
+        </a>
+      </div>
+      <!-- Header Controls End -->
+
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Content Start -->
+    <div id="content" class="content">
+      <div class="content__wrapper">
+
+        <!-- Project Details Section Start -->
+        <section id="project-details" class="inner project-details" style="padding-top: 12rem;">
+          <!-- Project Title -->
+          <div class="content__block section-title">
+            <div class="mb-4">
+              <h1 class="h2__title animate-in-up">Hela Website Experience</h1>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="content__block grid-block">
+            <div class="project-hero animate-in-up">
+              <img src="img/hela_web/1.png" alt="Hela Website Experience Hero Image" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Project Overview -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Extending Hela to the Web version</h3>
+                    <p class="animate-in-up">
+                      While Hela was originally conceived as a mobile first solution, I recognized early on that many users – especially planners and frequent travelers often begin their journey on desktop devices. To support this behavior, I designed a responsive website version of Hela that complemented the mobile app and provided flexibility for users to switch between platforms without friction.
+                    </p>
+                    <p class="animate-in-up">
+                      In the initial mapping stage, I made a strategic decision to only enable access to the Travel Guide and Travel Blogs sections, alongside a dedicated product landing page. This allowed us to:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li>Focus development on the most content-heavy, research-driven parts of the experience</li>
+                      <li>Cater to early users looking to explore destinations before committing to the app</li>
+                      <li>Drive awareness and downloads via a clear, conversion-focused landing page</li>
+                    </ul>
+                    <p class="animate-in-up">
+                      This phased rollout also helped validate desktop demand without overextending resources during the early build phase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/2.png" alt="Hela Website - Why Build a Web Version" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Why Build a Web Version -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Why Build a Web Version?</h3>
+                    <p class="animate-in-up">
+                      Through early user research and persona development we identified two key user behaviours:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li><strong>Pre-trip planning often happens on desktop</strong> — Users preferred larger screens when comparing destinations, reading blogs, and managing itineraries.</li>
+                      <li><strong>Real-time navigation and bookings shift to mobile</strong> — Once on the go, users relied on their phones.</li>
+                    </ul>
+                    <p class="animate-in-up">
+                      To address this, the website was designed not as a simple mirror of the mobile app, but as a companion platform optimized for browsing, planning, and booking — while maintaining full feature parity and design consistency with the mobile version.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Process Section -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Process</h3>
+                    <h4 class="animate-in-up">1. Cross-Platform Alignment</h4>
+                    <p class="animate-in-up">
+                      I began by mapping out shared user flows between mobile and web. Key journeys like itinerary creation, hotel booking, and exploring local content were prioritized for parity. The challenge was maintaining coherence while optimizing for distinct behaviours across screen sizes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Images 3, 4 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/3.png" alt="Hela Website - Cross-Platform Alignment Step 1" class="img-fluid gallery-image">
+            </div>
+          </div>
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/4.png" alt="Hela Website - Cross-Platform Alignment Step 2" class="img-fluid gallery-image">
+            </div>
+          </div>
+
+          <!-- Responsive Design System -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h4 class="animate-in-up">2. Responsive Design System</h4>
+                    <p class="animate-in-up">
+                      Using the mobile design system as a foundation, I extended the visual language to accommodate responsive breakpoints. Components were adapted for desktop interactions including wider layouts, persistent sidebars, and hover states without compromising on clarity or usability.
+                    </p>
+                    
+                    <h4 class="animate-in-up">3. Adaptive User Flow Design</h4>
+                    <p class="animate-in-up">
+                      Certain flows were redesigned specifically for desktop ergonomics. For example:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li>Itinerary planning featured a split-screen view with drag and drop support</li>
+                      <li>Search and discovery offered advanced filters and map integration</li>
+                      <li>Blog reading was enhanced with distraction-free layouts and related content suggestions</li>
+                    </ul>
+                    
+                    <h4 class="animate-in-up">4. Consistent Visual Identity</h4>
+                    <p class="animate-in-up">
+                      I ensured branding, tone, and visual hierarchy remained consistent across platforms. By reusing core assets and adapting components responsibly, the transition between mobile and desktop felt natural and connected.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 5 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/5.png" alt="Hela Website - Responsive Design System" class="img-fluid gallery-image">
+            </div>
+          </div>
+
+          <!-- Look and Feel -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h4 class="animate-in-up">5. Look and feel</h4>
+                    <p class="animate-in-up">
+                      The website was designed to reflect a clean, modern, and immersive aesthetic — aligning with the app's brand while optimizing for desktop experiences. Soft tones, spacious layouts, and bold imagery create a calming yet inspiring atmosphere that invites exploration. Interactive elements like hover states, smooth transitions, and responsive components ensure the interface feels intuitive and engaging across all screen sizes. The overall look and feel strike a balance between functionality and visual storytelling, helping users plan their journeys with confidence and ease.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 6 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/6.png" alt="Hela Website - Look and Feel" class="img-fluid gallery-image">
+            </div>
+          </div>
+
+          <!-- Developer Collaboration & Handoff -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h4 class="animate-in-up">6. Developer Collaboration & Handoff</h4>
+                    <p class="animate-in-up">
+                      I created high-fidelity desktop prototypes in Figma and worked closely with the dev team to ensure responsive behaviour and accessibility standards were met. I also provided annotations for layout breakpoints, keyboard interactions, and mobile-to-web sync behaviour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Images 7, 8, 9, 10 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/7.png" alt="Hela Website - Developer Collaboration Step 1" class="img-fluid gallery-image">
+            </div>
+          </div>
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/8.png" alt="Hela Website - Developer Collaboration Step 2" class="img-fluid gallery-image">
+            </div>
+          </div>
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/9.png" alt="Hela Website - Developer Collaboration Step 3" class="img-fluid gallery-image">
+            </div>
+          </div>
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_web/10.png" alt="Hela Website - Developer Collaboration Step 4" class="img-fluid gallery-image">
+            </div>
+          </div>
+        </section>
+      
+          <!-- Content Block - Related Projects Start -->
+          <div class="content__block grid-block">
+            <h3 class="animate-in-up mb-4">Related Projects</h3>
+            <div class="container-fluid px-0">
+              <div class="row gx-3">
+                <div class="col-12 col-md-6 mb-4 animate-card-2">
+                  <div class="related-project">
+                    <a href="isometric-house.html">
+                      <img src="img/first page.png" alt="Hela Travel Assistant App" class="img-fluid mb-3">
+                      <h5>Hela Travel Assistant</h5>
+                      <div class="d-flex flex-wrap">
+                        <span class="rounded-tag me-2 mb-2">Mobile App</span>
+                        <span class="rounded-tag me-2 mb-2">UI/UX</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4 animate-card-2">
+                  <div class="related-project">
+                    <a href="dashboard-template.html">
+                      <img src="https://dummyimage.com/600x400/7ED321/ffffff?text=Dashboard+UI" alt="Dashboard Template" class="img-fluid mb-3">
+                      <h5>Dashboard Template</h5>
+                      <div class="d-flex flex-wrap">
+                        <span class="rounded-tag me-2 mb-2">UI Design</span>
+                        <span class="rounded-tag me-2 mb-2">Dashboard</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Related Projects End -->
+
+        </section>
+        <!-- Project Details Section End -->
+
+      </div>
+    </div>
+    <!-- Page Content End -->
+
+    <!-- Load Scripts Start -->
+    <script src="js/libs.min.js"></script>
+    <script>
+      // GSAP Scroll Animations - Faster and Smoother
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Add project page class to keep normal header positioning
+      document.body.classList.add('project-page');
+
+      // Faster animation settings
+      gsap.set('.animate-in-up', {y: 20, opacity: 0});
+
+      ScrollTrigger.batch('.animate-in-up', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0, 
+          duration: 0.4,
+          ease: 'power2.out',
+          stagger: 0.05, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 20, overwrite: true})
+      });
+
+      ScrollTrigger.batch('.animate-card-2', {
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1, 
+          y: 0, 
+          duration: 0.4,
+          ease: 'power2.out',
+          stagger: 0.08, 
+          overwrite: true
+        }),
+        onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 20, overwrite: true})
+      });
+
+      // Force full-width layout for project pages
+      document.addEventListener('DOMContentLoaded', function() {
+        const contentElement = document.getElementById('content');
+        if (contentElement) {
+          contentElement.classList.add('full-width');
+          contentElement.style.marginLeft = '0';
+          contentElement.style.paddingLeft = '0';
+          contentElement.style.width = '100%';
+        }
+        
+        // Disable any avatar-related JavaScript
+        const avatar = document.getElementById('avatar');
+        if (!avatar) {
+          // If no avatar exists, ensure content is full width
+          if (contentElement) {
+            contentElement.style.marginLeft = '0 !important';
+            contentElement.style.paddingLeft = '0 !important';
+          }
+        }
+      });
+    </script>
+    <script src="js/app.js"></script>
+    <!-- Load Scripts End -->
+    
+  </body>
+
+</html>

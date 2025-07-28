@@ -28,9 +28,10 @@
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/project-details.css">
+    <link rel="stylesheet" type="text/css" href="css/modern-glassy.css">
     <!-- Template Styles End -->
     
-    <!-- Custom Gallery Styles -->
+    <!-- Custom Project Styles -->
     <style>
       /* Force full-width content for project pages */
       #content {
@@ -54,60 +55,43 @@
         padding-left: 0 !important;
         margin-left: 0 !important;
       }
-      
-      /* Gallery styles */
-      .gallery-item:hover .gallery-caption {
-        transform: translateY(0) !important;
+
+      /* Modern rounded corners for all project images */
+      .project-hero img,
+      .project-image img,
+      .gallery-image {
+        border-radius: 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      
-      .gallery-item:hover img {
-        transform: scale(1.05) !important;
-        filter: brightness(1.1) contrast(1.1);
+
+      /* Glassy hover effects */
+      .project-hero img:hover,
+      .project-image img:hover,
+      .gallery-image:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(20px);
       }
-      
-      .gallery-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-        z-index: 1;
-      }
-      
-      .gallery-item:hover::before {
-        opacity: 1;
-      }
-      
-      .badge {
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.2);
-      }
-      
-      .stat-number {
-        background: linear-gradient(45deg, var(--accent), var(--secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: bold;
-      }
-      
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-      }
-      
-      .gallery-header h3 {
-        animation: float 3s ease-in-out infinite;
-      }
-      
-      .gallery-item {
-        position: relative;
+
+      /* Glassy card effects */
+      .related-project {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         overflow: hidden;
+      }
+
+      .related-project:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .related-project img {
+        border-radius: 12px;
       }
     </style>
 
@@ -433,24 +417,24 @@
               <div class="row gx-3">
                 <div class="col-12 col-md-6 mb-4 animate-card-2">
                   <div class="related-project">
-                    <a href="dashboard-template.html">
-                      <img src="https://dummyimage.com/600x400/3c3c3c/636363" alt="Dashboard Template" class="img-fluid mb-3">
-                      <h5>Dashboard Template</h5>
+                    <a href="hela-website.html">
+                      <img src="img/hela_web/1.png" alt="Hela Website Experience" class="img-fluid mb-3">
+                      <h5>Hela Website Experience</h5>
                       <div class="d-flex flex-wrap">
-                        <span class="rounded-tag me-2 mb-2">UI Design</span>
-                        <span class="rounded-tag me-2 mb-2">Dashboard</span>
+                        <span class="rounded-tag me-2 mb-2">Web Design</span>
+                        <span class="rounded-tag me-2 mb-2">Responsive</span>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4 animate-card-2">
                   <div class="related-project">
-                    <a href="smart-penguin.html">
-                      <img src="https://dummyimage.com/600x400/4d4d4d/636363" alt="Smart Penguin App" class="img-fluid mb-3">
-                      <h5>Smart Penguin</h5>
+                    <a href="dashboard-template.html">
+                      <img src="https://dummyimage.com/600x400/3c3c3c/636363" alt="Dashboard Template" class="img-fluid mb-3">
+                      <h5>Dashboard Template</h5>
                       <div class="d-flex flex-wrap">
-                        <span class="rounded-tag me-2 mb-2">Mobile App</span>
-                        <span class="rounded-tag me-2 mb-2">UI/UX</span>
+                        <span class="rounded-tag me-2 mb-2">UI Design</span>
+                        <span class="rounded-tag me-2 mb-2">Dashboard</span>
                       </div>
                     </a>
                   </div>
@@ -472,6 +456,9 @@
     <script>
       // GSAP Scroll Animations - Faster and Smoother
       gsap.registerPlugin(ScrollTrigger);
+
+      // Add project page class to keep normal header positioning
+      document.body.classList.add('project-page');
 
       // Faster animation settings
       gsap.set('.animate-in-up', {y: 20, opacity: 0});
