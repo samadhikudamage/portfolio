@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Page Title -->
+    <title>Hela Admin Portal - The Heart Behind the Experience - Samadhi Kudamage Portfolio</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Detailed view of Hela Admin Portal project - Samadhi Kudamage UI/UX Specialist portfolio">
+    <meta name="keywords" content="samadhi kudamage, ui/ux, admin portal, dashboard design, hela admin, portfolio, user experience, saas design">
+    <meta name="author" content="samadhi_kudamage">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/project-details.css">
+    <link rel="stylesheet" type="text/css" href="css/modern-glassy.css">
+    <!-- Template Styles End -->
+    
+    <!-- Custom Project Styles -->
+    <style>
+      /* Force full-width content for project pages */
+      #content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      #content.full-width {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      /* Disable any avatar-related spacing */
+      body {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+      }
+
+      /* Modern rounded corners for all project images */
+      .project-hero img,
+      .project-image img,
+      .gallery-image {
+        border-radius: 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* Glassy hover effects */
+      .project-hero img:hover,
+      .project-image img:hover,
+      .gallery-image:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(20px);
+      }
+
+      /* Glassy card effects */
+      .related-project {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow: hidden;
+      }
+
+      .related-project:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .related-project img {
+        border-radius: 12px;
+      }
+    </style>
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+    <meta name="msapplication-navbutton-color" content="#111111">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Custom Browser Color End -->
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div id="loaderContent" class="loader__content">
+        <div class="loader__shadow"></div>
+        <div class="loader__box"></div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Header Start -->
+    <header id="header" class="header d-flex justify-content-between">
+
+      <!-- Navigation Menu Start -->
+      <div class="header__navigation">
+        <nav id="menu" class="menu">
+          <ul class="menu__list d-flex justify-content-start">
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#home">
+                <span class="menu__caption">Home</span>
+                <i class="ph-bold ph-house-simple"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#portfolio">
+                <span class="menu__caption">Portfolio</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#about">
+                <span class="menu__caption">About Me</span>
+                <i class="ph-bold ph-user"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#resume">
+                <span class="menu__caption">Resume</span>
+                <i class="ph-bold ph-article"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="index.html#contact">
+                <span class="menu__caption">Contact</span>
+                <i class="ph-bold ph-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Navigation Menu End -->
+
+      <!-- Header Controls Start -->
+      <div class="header__controls d-flex justify-content-end">
+        <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+        <a id="notify-trigger" class="header__trigger btn" href="mailto:hello@samadhikudamage.com?subject=Message%20from%20your%20site">
+          <span class="trigger__caption">Let's Talk</span>
+          <i class="ph-bold ph-chat-dots"></i>
+        </a>
+      </div>
+      <!-- Header Controls End -->
+
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Content Start -->
+    <div id="content" class="content">
+      <div class="content__wrapper">
+
+        <!-- Project Details Section Start -->
+        <section id="project-details" class="inner project-details" style="padding-top: 12rem;">
+          <!-- Project Title -->
+          <div class="content__block section-title">
+            <div class="mb-4">
+              <h1 class="h2__title animate-in-up">Hela Admin Portal - The Heart Behind the Experience</h1>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="content__block grid-block">
+            <div class="project-hero animate-in-up">
+              <img src="img/hela_admin_portal/1.jpg" alt="Hela Admin Portal Hero Image" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Project Overview -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <p class="animate-in-up">
+                      While most of Hela's spotlight was on creating a seamless travel experience for end-users, there was a powerful engine working behind the scenes: the Hela Admin Portal. This wasn't just a back-office tool. It was an all-in-one, SaaS-style platform built to empower admins, editors, vendors, and internal teams to manage the entire travel ecosystem in one place.
+                    </p>
+                    <p class="animate-in-up">
+                      As the UX Designer, I was responsible for crafting this experience from scratch — translating operational complexity into a system that felt clear, capable, and even delightful to use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Understanding the Challenge -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Understanding the Challenge</h3>
+                    <p class="animate-in-up">
+                      From the outset, it was clear that the admin portal would be more than just a backend interface — it would be the operational core of the entire Hela ecosystem. Unlike the end-user app, which was designed to inspire exploration and ease of travel, the admin portal had to be precise, powerful, and process-driven. But the real challenge wasn't just building one dashboard — it was building one system for many different users.
+                    </p>
+                    
+                    <h4 class="animate-in-up">Multiple User Types, Multiple Needs</h4>
+                    <ul class="project-features animate-in-up">
+                      <li><strong>Internal Admins:</strong> Responsible for content moderation, user management, analytics tracking, and system maintenance. They needed visibility and control.</li>
+                      <li><strong>External Partners:</strong> These were contributors and tourism authorities who submitted blog posts, cultural events, or destination updates. Their workflow focused on submission, review, and publishing.</li>
+                      <li><strong>Vendors:</strong> Local service providers (e.g., guides, hotels, transport companies) who managed their offerings through a vendor portal section — handling profiles, availability, and booking responses.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/2.jpg" alt="Hela Admin Portal - Multiple User Types" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Starting with Empathy & Discovery -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Starting with Empathy & Discovery</h3>
+                    <p class="animate-in-up">
+                      I began the process by organizing a series of discovery sessions with key stakeholders including product owners, backend developers, and intended admin users. The goal was to uncover:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li>What tasks were essential on a day-to-day basis?</li>
+                      <li>Where were the bottlenecks in their current tools (or spreadsheets)?</li>
+                      <li>How could the portal reduce manual work and increase clarity?</li>
+                    </ul>
+                    <p class="animate-in-up">
+                      To make sure we were building the right thing, I created workflow maps that illustrated the end-to-end process for key actions: publishing a travel guide, approving a new vendor, scheduling an event, reviewing flagged user activity, and more.
+                    </p>
+                    <p class="animate-in-up">
+                      Each task was broken down into smaller actions and decision points, helping me identify where users might encounter friction or need clarity in the interface. These insights formed the foundation for the user journey flows and information architecture in the next phase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/3.jpg" alt="Hela Admin Portal - Discovery Process" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Aligning Vision with Real-World Constraints -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Aligning Vision with Real-World Constraints</h3>
+                    <p class="animate-in-up">
+                      Another layer of the challenge was balancing this ideal user experience with real-world limitations such as system constraints, backend architecture, and phased development timelines. The portal had to be powerful but lean enough to be launched alongside the mobile app MVP.
+                    </p>
+                    <p class="animate-in-up">
+                      So instead of building everything at once, I prioritized core workflows that supported the initial rollout — including content publishing, user visibility, and vendor onboarding — while planning modular extensions for more advanced features (like analytics dashboards and AI-powered tools) in future iterations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/4.png" alt="Hela Admin Portal - Vision and Constraints" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Defining the Structure -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Defining the Structure</h3>
+                    <p class="animate-in-up">
+                      With a strong understanding of user goals, workflows, and priorities, I transitioned into defining the structural backbone of the portal. This phase was all about translating complexity into clarity — ensuring that even the most powerful capabilities felt intuitive and manageable.
+                    </p>
+                    <p class="animate-in-up">
+                      Armed with those insights, I moved into information architecture and user flow design. I created task-based flows for each user role — mapping how a content editor, a system admin, and a vendor might interact with the portal.
+                    </p>
+                    
+                    <div class="project-features animate-in-up">
+                      <div class="mb-3">
+                        <strong>📝 Content Hub</strong> – A space where blogs, travel guides, and local events could be created, edited, reviewed, and scheduled. I ensured that each content type had a familiar editor layout, but with smart metadata tagging to support search and filtering.
+                      </div>
+                      <div class="mb-3">
+                        <strong>👤 User Management Panel</strong> – A comprehensive table and profile system that allowed admins to search, filter, and manage all user types. I introduced visual cues (e.g., badges, roles, status indicators) to help users quickly identify permission levels and account activity.
+                      </div>
+                      <div class="mb-3">
+                        <strong>🏨 Vendor Portal Section</strong> – Designed as a simplified interface within the admin environment, this area allowed partners to manage their listings, respond to bookings, and maintain service details. Special attention was given to onboarding flows and form validation to reduce friction for less tech-savvy users.
+                      </div>
+                      <div class="mb-3">
+                        <strong>📊 System Dashboard</strong> – A high-level overview screen showing key system metrics (pending approvals, user growth, recent uploads) alongside shortcut actions. This was built to support both strategic monitoring and rapid operational decisions.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 5 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/5.png" alt="Hela Admin Portal - Information Architecture" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Modular Approach -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <p class="animate-in-up">
+                      The modular approach wasn't just about organization — it was about scalability and clarity. By grouping tasks and features in ways that mirrored user intent, I reduced cognitive load and helped admins focus on what mattered most in the moment.
+                    </p>
+                    <p class="animate-in-up">
+                      To ensure consistency across modules, I developed a shared design system that handled layout grids, button styles, tables, modals, and form fields. This helped maintain a visual rhythm across pages, but also sped up prototyping and future updates.
+                    </p>
+                    <p class="animate-in-up">
+                      This structural foundation made it easy to grow the platform over time — whether it was adding a reporting engine, integrating AI-generated content tools, or expanding vendor capabilities — without overwhelming the original experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design & Prototyping -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Design & Prototyping</h3>
+                    <p class="animate-in-up">
+                      Once the structure and flows were defined, I moved into the design execution phase, starting with low-fidelity wireframes. At this stage, the focus was purely on function over form — understanding what each screen needed to accomplish and how users could move through tasks with minimal friction.
+                    </p>
+                    <p class="animate-in-up">
+                      I designed interactive low-fidelity prototypes that emphasized:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li><strong>Task clarity:</strong> Users should know exactly where to go and what to do next.</li>
+                      <li><strong>Simplified layouts:</strong> Content hubs, user tables, and forms were laid out with collapsible sidebars and sticky headers to support long-scroll behavior and dense information architecture.</li>
+                      <li><strong>Utility-first UI elements:</strong> Filters, dropdown actions, confirmation modals, and inline editing were introduced early to simulate real admin scenarios.</li>
+                    </ul>
+                    <p class="animate-in-up">
+                      These prototypes were tested through internal stakeholder walkthroughs, including developers, product leads, and team members who represented each admin role. Feedback loops were fast and collaborative, allowing us to make iterative improvements quickly — whether that meant reordering table columns, adjusting filter logic, or introducing role-specific dashboards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 6 -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/6.png" alt="Hela Admin Portal - Wireframes and Prototyping" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- From Wireframes to High-Fidelity Design -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h4 class="animate-in-up">From Wireframes to High-Fidelity Design</h4>
+                    <p class="animate-in-up">
+                      With functional alignment confirmed, I began transforming the experience into high-fidelity visuals — guided by Hela's core brand identity but tailored for a more professional, utility-oriented audience.
+                    </p>
+                    <p class="animate-in-up">
+                      To maintain both visual clarity and scalability, I developed a neutral, responsive design system specifically for the admin interface. This system balanced structure and flexibility, ensuring that new modules or user types could be introduced without design debt. Key highlights included:
+                    </p>
+                    <ul class="project-features animate-in-up">
+                      <li>A clear visual hierarchy using type weight, spacing, and subtle color coding to prioritize user attention across complex data.</li>
+                      <li>Reusable UI components like filter bars, status chips, approval tags, and context menus, which not only improved usability but also reduced development effort.</li>
+                      <li>Dark and light mode support, considering long working hours for internal users who might prefer different viewing modes.</li>
+                      <li>Accessibility-focused interactions, including high contrast states, keyboard navigability, and proper ARIA labeling — making the experience inclusive and standards-compliant.</li>
+                      <li>Responsive behaviors for tablet and small desktop environments, ensuring the system could scale for on-the-go use, especially for vendors managing their listings on-site.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- High-Fidelity Design Images -->
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/7.png" alt="Hela Admin Portal - High-Fidelity Design 1" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/8.png" alt="Hela Admin Portal - High-Fidelity Design 2" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/9.png" alt="Hela Admin Portal - High-Fidelity Design 3" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/10.png" alt="Hela Admin Portal - High-Fidelity Design 4" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/11.png" alt="Hela Admin Portal - High-Fidelity Design 5" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="content__block grid-block">
+            <div class="project-image animate-in-up">
+              <img src="img/hela_admin_portal/12.png" alt="Hela Admin Portal - High-Fidelity Design 6" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Developer Collaboration & Iteration -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Developer Collaboration & Iteration</h3>
+                    <p class="animate-in-up">
+                      I worked side-by-side with developers during implementation, using Figma's dev mode for detailed specs and interaction notes. During sprints, I participated in reviews to ensure fidelity to the design, helped solve real-time edge cases, and made UX refinements based on system behavior.
+                    </p>
+                    <p class="animate-in-up">
+                      This version of the portal represented the MVP, focused on launching essential features to support the initial app release. But from day one, we designed it with scalability in mind — knowing more advanced functionality would follow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Looking Ahead -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <div class="project-description__content">
+                    <h3 class="animate-in-up">Looking Ahead: AI and Beyond</h3>
+                    <p class="animate-in-up">
+                      With the MVP launched, we began collecting feedback from internal users and vendors. These insights informed the next wave of features, including plans to integrate AI-driven tools for itinerary management, content moderation, and personalized user insights — all of which would be controlled through the admin interface.
+                    </p>
+                    <p class="animate-in-up">
+                      The portal is evolving into a true central command system — one that not only supports content management but powers intelligent decisions and connects all parts of the Hela ecosystem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Block - Related Projects Start -->
+          <div class="content__block grid-block">
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-8 grid-item">
+                  <h3 class="animate-in-up">Related Projects</h3>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-12 col-xl-6 grid-item animate-card-2">
+                  <div class="related-project">
+                    <a href="hela-website.html">
+                      <img src="img/hela_web/1.png" alt="Hela Website Experience" class="img-fluid">
+                      <h5>Hela Website Experience</h5>
+                      <div class="d-flex flex-wrap">
+                        <span class="rounded-tag me-2 mb-2">UI/UX Design</span>
+                        <span class="rounded-tag me-2 mb-2">Web Design</span>
+                        <span class="rounded-tag me-2 mb-2">Responsive</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-6 grid-item animate-card-2">
+                  <div class="related-project">
+                    <a href="artistea.html">
+                      <img src="img/Artistea/1.png" alt="ARTISTEA Mobile App" class="img-fluid">
+                      <h5>ARTISTEA</h5>
+                      <div class="d-flex flex-wrap">
+                        <span class="rounded-tag me-2 mb-2">UI/UX Design</span>
+                        <span class="rounded-tag me-2 mb-2">Mobile App</span>
+                        <span class="rounded-tag me-2 mb-2">Tea Producers</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Related Projects End -->
+
+        </section>
+        <!-- Project Details Section End -->
+
+      </div>
+    </div>
+    <!-- Page Content End -->
+
+    <!-- Load Scripts Start -->
+    <script src="js/libs.min.js"></script>
+    <script>
+      // GSAP Scroll Animations - Faster and Smoother
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Add project page class to keep normal header positioning
+      document.body.classList.add('project-page');
+
+      // Initialize imagesLoaded to handle page loading properly
+      const content = document.querySelector('body');
+      const imgLoad = imagesLoaded(content);
+
+      imgLoad.on('done', instance => {
+        // Hide loader when images are loaded
+        document.getElementById("loaderContent").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("loader").classList.add("loaded");
+        }, 300);
+
+        // Faster animation settings
+        gsap.set('.animate-in-up', {y: 20, opacity: 0});
+
+        ScrollTrigger.batch('.animate-in-up', {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.4,
+            ease: 'power2.out',
+            stagger: 0.05, 
+            overwrite: true
+          }),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 20, overwrite: true})
+        });
+
+        ScrollTrigger.batch('.animate-card-2', {
+          onEnter: batch => gsap.to(batch, {
+            opacity: 1, 
+            y: 0, 
+            duration: 0.4,
+            ease: 'power2.out',
+            stagger: 0.08, 
+            overwrite: true
+          }),
+          onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 20, overwrite: true})
+        });
+
+        // Force full-width layout for project pages
+        document.addEventListener('DOMContentLoaded', function() {
+          const contentElement = document.getElementById('content');
+          if (contentElement) {
+            contentElement.classList.add('full-width');
+            contentElement.style.marginLeft = '0';
+            contentElement.style.paddingLeft = '0';
+            contentElement.style.width = '100%';
+          }
+          
+          // Disable any avatar-related JavaScript
+          const avatar = document.getElementById('avatar');
+          if (!avatar) {
+            // If no avatar exists, ensure content is full width
+            if (contentElement) {
+              contentElement.style.marginLeft = '0 !important';
+              contentElement.style.paddingLeft = '0 !important';
+            }
+          }
+        });
+
+        // Refresh ScrollTrigger after all animations are set up
+        ScrollTrigger.refresh();
+      });
+    </script>
+    <script src="js/app.js"></script>
+    <!-- Load Scripts End -->
+    
+  </body>
+
+</html>
