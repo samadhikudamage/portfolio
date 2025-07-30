@@ -1,0 +1,216 @@
+/* Liquid Glassy Effect for All Project Images */
+
+/* Portfolio Grid Images (Main Page) */
+.gallery__link {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px; /* Rounded corners */
+}
+
+.gallery__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  z-index: 2;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), /* Subtle inner white border */
+              inset 0 0 8px rgba(255, 255, 255, 0.08); /* Subtle inner glow */
+}
+
+.gallery__link:hover::before {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), /* Slightly brighter inner border on hover */
+              inset 0 0 12px rgba(255, 255, 255, 0.12), /* Slightly stronger inner glow on hover */
+              0 0 8px rgba(255, 255, 255, 0.15); /* Subtle outer glow on hover */
+}
+
+.gallery__link::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+  transform: rotate(0deg);
+  transition: transform 0.8s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.gallery__link:hover::after {
+  transform: rotate(360deg);
+  opacity: 0.6; /* Reduced opacity for subtlety */
+}
+
+.gallery__image {
+  transition: transform 0.4s ease;
+  border-radius: 20px; /* Ensure image corners match the link container */
+}
+
+.gallery__link:hover .gallery__image {
+  transform: scale(1.03); /* Reduced zoom for subtlety */
+}
+
+/* Project Page Images - General wrapper for all images */
+.project-hero,
+.project-image,
+.content__block img,
+.img-fluid {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Direct image styling for project pages */
+.project-hero img,
+.project-image img,
+.gallery-image,
+.img-fluid,
+.content__block img {
+  border-radius: 16px !important;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Liquid glass effect using pseudo-elements for project images */
+.project-hero img::before,
+.project-image img::before,
+.gallery-image::before,
+.img-fluid::before,
+.content__block img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  z-index: 1;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), /* Subtle inner border */
+              inset 0 0 6px rgba(255, 255, 255, 0.06); /* Very subtle inner glow */
+  pointer-events: none;
+}
+
+/* Container-based approach for better compatibility */
+.project-hero,
+.project-image,
+.gallery-item,
+.content__block {
+  position: relative;
+  border-radius: 16px; /* Ensure container has rounded corners */
+  overflow: hidden; /* Clip the image corners */
+}
+
+.project-hero::before,
+.project-image::before,
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  z-index: 1;
+  transition: all 0.4s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), /* Subtle inner border */
+              inset 0 0 6px rgba(255, 255, 255, 0.05); /* Very subtle inner glow */
+  pointer-events: none;
+  opacity: 0;
+}
+
+.project-hero:hover::before,
+.project-image:hover::before,
+.gallery-item:hover::before {
+  opacity: 1;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), /* Slightly more visible border on hover */
+              inset 0 0 10px rgba(255, 255, 255, 0.08), /* Subtle inner glow on hover */
+              0 0 6px rgba(255, 255, 255, 0.12); /* Very subtle outer glow */
+}
+
+/* Hover effects for project images */
+.project-hero:hover img,
+.project-image:hover img,
+.gallery-item:hover .gallery-image,
+.content__block:hover img {
+  transform: translateY(-2px) scale(1.015); /* Very subtle lift and zoom */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Alternative approach using box-shadow for glass effect */
+.project-hero img:hover,
+.project-image img:hover,
+.gallery-image:hover,
+.img-fluid:hover {
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.12), /* Drop shadow */
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15), /* Inner border */
+    inset 0 0 8px rgba(255, 255, 255, 0.06); /* Inner glow */
+  transform: translateY(-2px) scale(1.015); /* Subtle movement */
+}
+
+/* Ensure images don't get too bright - preserve visibility */
+.project-hero img,
+.project-image img,
+.gallery-image,
+.img-fluid {
+  filter: brightness(1) contrast(1); /* Maintain original brightness */
+}
+
+.project-hero img:hover,
+.project-image img:hover,
+.gallery-image:hover,
+.img-fluid:hover {
+  filter: brightness(1.05) contrast(1.02); /* Very subtle brightness increase */
+}
+
+/* Side Block Glassy Effect */
+.avatar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.4s ease;
+}
+
+.avatar:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+/* Button Glassy Effect */
+.btn-default {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.6), rgba(168, 85, 247, 0.6));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 12px; /* Ensure accent buttons also have rounded corners */
+}
+
+.btn-accent:hover {
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.8), rgba(168, 85, 247, 0.8));
+  border-color: rgba(139, 92, 246, 0.5);
+}
